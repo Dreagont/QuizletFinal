@@ -11,8 +11,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quizletfinal.models.Card
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import org.apache.commons.io.IOUtils
 import java.io.BufferedReader
 import java.io.IOException
@@ -21,8 +19,6 @@ import java.io.InputStreamReader
 class CsvReaderActivity : AppCompatActivity() {
 
     private lateinit var fileName: TextView
-    private lateinit var firebaseDatabase: FirebaseDatabase
-    private lateinit var databaseReference: DatabaseReference
     private lateinit var cancelButton: Button
 
     private val READ_REQUEST_CODE = 123

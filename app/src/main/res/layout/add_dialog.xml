@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/trans_button_layout"
-        android:text="Study set"
+        android:text="Topic"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:layout_marginHorizontal="20dp"/>

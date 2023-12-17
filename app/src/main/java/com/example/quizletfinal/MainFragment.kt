@@ -66,7 +66,7 @@ class MainFragment : Fragment(), OnItemClickListener {
         val username = sharedPreferences.getString("username", "No Username")
         loginUser = sharedPreferences.getString("loginUsername","no")
 
-            if (username != null) {
+        if (username != null) {
             loadTopic(username)
         }
 
