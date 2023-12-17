@@ -6,7 +6,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.OpenableColumns
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -24,6 +23,7 @@ class CsvReaderActivity : AppCompatActivity() {
     private lateinit var fileName: TextView
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
+    private lateinit var cancelButton: Button
 
     private val READ_REQUEST_CODE = 123
     private val cardList = ArrayList<Card>()
@@ -33,6 +33,7 @@ class CsvReaderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_csv_reader)
         fileName = findViewById(R.id.fileName)
+        cancelButton = findViewById(R.id.button_cancel)
 
         username = intent.getStringExtra("username")
 
@@ -41,6 +42,10 @@ class CsvReaderActivity : AppCompatActivity() {
             intent.addCategory(Intent.CATEGORY_OPENABLE)
             intent.type = "text/*"
             startActivityForResult(intent, READ_REQUEST_CODE)
+        }
+
+        findViewById<Button>(R.id.button_cancel).setOnClickListener {
+            finish()
         }
     }
 

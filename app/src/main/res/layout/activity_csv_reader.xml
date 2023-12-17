@@ -14,16 +14,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/readAction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Import student form csv"
             android:textColor="@color/black"
-            android:textSize="30dp"
-            />
+            android:textSize="30dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,6 +53,14 @@
             android:background="@drawable/trans_button_layout"
             app:layout_constraintTop_toBottomOf="@+id/button_loadCsv"
             android:text="Save CSV File" />
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/trans_button_layout"
+            app:layout_constraintTop_toBottomOf="@+id/button_saveCsv"
+            android:text="Cancel" />
     </LinearLayout>
 
 

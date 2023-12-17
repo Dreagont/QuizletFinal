@@ -176,7 +176,6 @@ class MultiChoiceActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         val isEnglish = isEnglish == 1
         frontCard.text = if (isEnglish) card.english else card.vietnamese
 
-        // Check if cardList has less than 4 words
         if (cardList.size < 4) {
             val incorrectAnswers = extendedCardList.shuffled().take(4 - cardList.size).toMutableList()
             val correctAnswerPosition = (0 until cardList.size).random()
